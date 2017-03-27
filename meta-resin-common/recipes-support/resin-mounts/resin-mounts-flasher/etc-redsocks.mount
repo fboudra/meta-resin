@@ -1,0 +1,13 @@
+[Unit]
+Description=redsocks configuration bind mount
+Requires=tmp.mount systemd-tmpfiles-setup.service
+After=tmp.mount systemd-tmpfiles-setup.service
+
+[Mount]
+What=/tmp/redsocks
+Where=/etc/redsocks
+Type=None
+Options=bind
+
+[Install]
+WantedBy=multi-user.target

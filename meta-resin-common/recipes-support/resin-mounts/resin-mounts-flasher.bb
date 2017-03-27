@@ -11,6 +11,7 @@ SRC_URI = " \
     file://etc-hostname.mount \
     file://home-root-.rnd.mount \
     file://etc-dropbear.mount \
+    file://etc-redsocks.mount \
     file://01-resin-binds-tmp.conf \
     "
 
@@ -28,6 +29,7 @@ SYSTEMD_SERVICE_${PN} = " \
     etc-hostname.mount \
     home-root-.rnd.mount \
     etc-dropbear.mount \
+    etc-redsocks.mount \
     "
 
 FILES_${PN} += " \
@@ -56,6 +58,7 @@ do_install () {
             ${WORKDIR}/etc-hostname.mount \
             ${WORKDIR}/home-root-.rnd.mount \
             ${WORKDIR}/etc-dropbear.mount \
+            ${WORKDIR}/etc-redsocks.mount \
             ${D}${sysconfdir}/systemd/system
         sed -i -e 's,@BASE_BINDIR@,${base_bindir},g' \
             -e 's,@SBINDIR@,${sbindir},g' \
