@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Add support for transparent proxy redirection using redsocks [Pablo]
 * Don't stop plymouth at boot [Andrei]
 
 # v2.0.0-rc5 - 2017-03-24
