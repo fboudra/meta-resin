@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Update NetworkManager to version 1.6.2 [Florin]
+
 # v2.0.0-rc6 - 2017-03-31
 
 * Update supervisor to v4.1.1 [Pablo]
